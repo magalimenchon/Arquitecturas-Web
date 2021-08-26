@@ -1,0 +1,70 @@
+package edu.isistan.db;
+
+import java.lang.reflect.InvocationTargetException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class Select {
+
+	public static void main(String[] args) {
+
+		
+		//REGISTRAR EL DRIVER
+		
+		//Registro el Driver
+		String driver = "org.apache.derby.jdbc.EmbeddedDriver";
+		
+		try {
+			//Creo una instancia del Driver usando mecanismo de reflexión
+			Class.forName(driver).getDeclaredConstructor().newInstance();
+		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException
+				| NoSuchMethodException | SecurityException | ClassNotFoundException e) {
+			//Falla al agregar el Driver sale del programa
+			e.printStackTrace();
+			System.exit(1);
+		}
+
+		
+		//GENERAR CONEXIÓN A LA BD
+		
+		//Defino URI: protocolo:tipoDB:path:paramCreación
+		String uri = "jdbc:derby:MyDerbyDb;create=true";
+		
+		try {
+			//Registro Driver con el uso de DriverManager
+			Connection conn = DriverManager.getConnection(uri);
+
+			
+			//HACER UN SELECT
+			
+			//Define la sentencia
+			String select = "SELECT * FROM persona";
+			//Prepara la sentencia de selección
+			PreparedStatement ps = conn.prepareStatement(select);
+			//Ejecuta la sentencia y almacena en una variable
+			//el conjunto de resultados obtenidos
+			ResultSet rs = ps.executeQuery();
+			//Recorre los resultados que retornó la sentencia con un cursor
+			while(rs.next()) {
+				//Imprime cada resultado respetando que coincida:
+				//Nro de columna con el tipo de ese atributo.
+								//Persona.id-col1 //Persona.nombre-col2	//Persona.edad-col3
+				System.out.println(rs.getInt(1)+", "+rs.getString(2)+", "+rs.getInt(3));
+			}
+			
+			//------------------------------------
+			
+			
+			//Cierra conexión de la BD
+			conn.close();
+		} catch (SQLException e) {
+			//Ataja fallos de conexión
+			e.printStackTrace();
+		}
+	}
+
+
+}

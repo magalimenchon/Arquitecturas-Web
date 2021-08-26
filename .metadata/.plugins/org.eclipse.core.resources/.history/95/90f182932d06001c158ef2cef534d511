@@ -1,0 +1,90 @@
+package edu.isistan.db;
+
+import java.lang.reflect.InvocationTargetException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class BaseDeDatos {
+
+	public static void main(String[] args) {
+		
+		
+		//REGISTRAR EL DRIVER
+		
+		//Registro el Driver
+		String driver = "org.apache.derby.jdbc.EmbeddedDriver";
+		
+		try {
+			//Creo una instancia del Driver usando mecanismo de reflexión
+			Class.forName(driver).getDeclaredConstructor().newInstance();
+		}catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException
+				| NoSuchMethodException | SecurityException | ClassNotFoundException e) {
+			//Falla al agregar el Driver sale del programa
+			e.printStackTrace();
+			System.exit(1);
+		}
+		
+		
+		//GENERAR CONEXIÓN A LA BD
+		
+		//Defino URI: protocolo:tipoDB:path:paramCreación
+		String uri = "jdbc:derby:MyDerbyDb;create=true";
+		
+		try {
+			//Registro Driver con el uso de DriverManager
+			Connection conn = DriverManager.getConnection(uri);
+			
+			
+			//TRABAJAR CON LA DB
+			
+			//Crear tablas
+			createTables(conn);
+			//Agrega registros
+			addPerson(conn, 1, "Juan", 20);
+			addPerson(conn, 2, "Paula", 30);
+			
+			//------------------------------------
+			
+			
+			//Cierra conexión de la BD
+			conn.close();
+		} catch (SQLException e) {
+			//Ataja fallos de conexión
+			e.printStackTrace();
+		}
+	}
+																				//Controla excepciones
+	private static void addPerson(Connection conn, int id, String name, int years) throws SQLException {
+		//Define la sentencia
+		String insert = "INSERT INTO persona (id, nombre, edad) VALUES (?, ?, ?)";
+		//Prepara la sentencia de inserción
+		PreparedStatement ps = conn.prepareStatement(insert);
+		//Setea valores de los placeholders
+		ps.setInt(1, id);
+		ps.setString(2, name);
+		ps.setInt(3, years);
+		//Ejecutamos el insert
+		ps.executeUpdate();
+		//Cerramos la preparación de la sentencia (No es necesario)
+		ps.close();
+		//Commitea la sentencia
+		conn.commit();
+	}
+
+													//Controla excepciones
+	private static void createTables(Connection conn) throws SQLException {
+		//Define la sentencia de creación de la tabla
+		String table = "CREATE TABLE persona(" +
+		"id INT,"+
+		"nombre VARCHAR(500),"+
+		"edad INT,"+
+		"PRIMARY KEY(id))";
+		//Prepara la sentencia y la ejecuta
+		conn.prepareStatement(table).execute();
+		//Commitea la sentencia
+		conn.commit();
+	}
+
+}

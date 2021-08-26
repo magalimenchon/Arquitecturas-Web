@@ -1,0 +1,35 @@
+package edu.isistan.dao.impl;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import edu.isistan.db.Persona;
+import edu.isistan.interfaces.PersonaDAO;
+
+public class PersonaDAOImpl extends Conexion implements PersonaDAO{
+
+	@Override
+	public void registrar(Persona generic) throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(Persona generic) throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Persona generic) throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public ResultSet read() throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

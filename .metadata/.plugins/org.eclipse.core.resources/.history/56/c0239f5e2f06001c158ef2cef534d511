@@ -1,0 +1,50 @@
+package edu.isistan.dao.impl;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import edu.isistan.dao.Conexion;
+import edu.isistan.db.Persona;
+import edu.isistan.interfaces.PersonaDAO;
+
+public class PersonaDAOImpl extends Conexion implements PersonaDAO{
+
+	@Override
+	public void registrar(Persona generic) throws SQLException {
+		//Define la sentencia
+		String insert = "INSERT INTO persona (id, nombre, edad) VALUES (?, ?, ?)";
+		// Prepara la sentencia de inserción
+		PreparedStatement ps = this.conn.prepareStatement(insert);
+		// Setea valores de los placeholders
+		ps.setInt(1, id);
+		ps.setString(2, name);
+		ps.setInt(3, years);
+		// Ejecutamos el insert
+		ps.executeUpdate();
+		// Cerramos la preparación de la sentencia (No es necesario)
+		ps.close();
+		// Commitea la sentencia
+		conn.commit();
+		
+	}
+
+	@Override
+	public void update(Persona generic) throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Persona generic) throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public ResultSet read() throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

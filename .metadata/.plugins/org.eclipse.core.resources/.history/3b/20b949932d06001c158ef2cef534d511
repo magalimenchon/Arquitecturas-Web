@@ -1,0 +1,5 @@
+package edu.isistan.interfaces;
+
+public interface CRUD {
+
+}

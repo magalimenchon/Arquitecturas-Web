@@ -1,0 +1,7 @@
+package edu.isistan.dao.impl;
+
+import edu.isistan.interfaces.PersonaDAO;
+
+public class PersonaDAOImpl extends Conexion implements PersonaDAO{
+
+}

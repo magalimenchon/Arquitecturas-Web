@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.apache.derby.jdbc.EmbeddedDriver"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="javax.persistence.Id"/>
+    <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
+    <fullyQualifiedTypeName name="javax.persistence.Column"/>
+    <fullyQualifiedTypeName name="javax.persistence.Persistence"/>
+    <fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
+    <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+    <fullyQualifiedTypeName name="edu.isistan.dao.Direccion"/>
+    <fullyQualifiedTypeName name="edu.isistan.dao.Persona"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="edu.isistan.dao.Conexion"/>
+    <fullyQualifiedTypeName name="edu.isistan.db.Persona"/>
+    <fullyQualifiedTypeName name="edu.isistan.interfaces.PersonaDAO"/>
+    <fullyQualifiedTypeName name="edu.isistan.dao.impl.PersonaDAOImpl"/>
+    <fullyQualifiedTypeName name="org.apache.derby.iapi.sql.ResultSet"/>
+</qualifiedTypeNameHistroy>

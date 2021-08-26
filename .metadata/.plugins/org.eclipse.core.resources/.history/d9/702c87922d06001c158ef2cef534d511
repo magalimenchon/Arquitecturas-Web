@@ -1,0 +1,6 @@
+package edu.isistan.interfaces;
+
+public interface PersonaDAO {
+
+	public void registrar
+}
