@@ -15,11 +15,13 @@
     <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
     <fullyQualifiedTypeName name="edu.isistan.dao.Direccion"/>
     <fullyQualifiedTypeName name="edu.isistan.dao.Persona"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="edu.isistan.dao.Conexion"/>
     <fullyQualifiedTypeName name="edu.isistan.db.Persona"/>
     <fullyQualifiedTypeName name="edu.isistan.interfaces.PersonaDAO"/>
     <fullyQualifiedTypeName name="edu.isistan.dao.impl.PersonaDAOImpl"/>
     <fullyQualifiedTypeName name="org.apache.derby.iapi.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="edu.isistan.interfaces.IConexion"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
