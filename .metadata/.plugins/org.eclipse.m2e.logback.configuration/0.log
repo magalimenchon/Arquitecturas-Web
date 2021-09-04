@@ -1678,3 +1678,4 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:j
 2021-08-30 16:19:07,761 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Magalí\Desktop\Arquitecturas-Web\JDBCBasicoPRUEBAJAVA11\src\main\resources
 2021-08-30 16:19:07,763 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2021-08-30 16:19:07,765 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Magalí\Desktop\Arquitecturas-Web\JDBCBasicoPRUEBAJAVA11\src\test\resources
+2021-08-30 16:33:18,628 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
