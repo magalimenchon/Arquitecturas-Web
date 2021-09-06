@@ -12,6 +12,9 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Magalí\Desktop\Arquitecturas-Web\Ejemplo_Clase1_Singleton"/>
+			<item value="C:\Users\Magalí\Desktop\Arquitecturas-Web\Ejemplo_Clase1_FactoryMethod"/>
+			<item value="C:\Users\Magalí\Desktop\Arquitecturas-Web\Ejemplo_Clase1_DAO_con_AbstractFactory"/>
 			<item value="C:\Users\Magalí\Desktop\Arquitecturas-Web\Ej3_DAO_ JDBCBasico_Derby"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">

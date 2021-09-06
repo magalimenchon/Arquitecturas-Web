@@ -21,7 +21,17 @@
     <fullyQualifiedTypeName name="edu.isistan.interfaces.PersonaDAO"/>
     <fullyQualifiedTypeName name="edu.isistan.dao.impl.PersonaDAOImpl"/>
     <fullyQualifiedTypeName name="org.apache.derby.iapi.sql.ResultSet"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="edu.isistan.interfaces.IConexion"/>
+    <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
+    <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
+    <fullyQualifiedTypeName name="javax.persistence.OneToOne"/>
+    <fullyQualifiedTypeName name="javax.persistence.MapsId"/>
+    <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="java.sql.Timestamp"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="org.hibernate.engine.profile.Fetch"/>
+    <fullyQualifiedTypeName name="org.hibernate.engine.profile.Fetch.Style"/>
+    <fullyQualifiedTypeName name="javax.persistence.FetchType"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
 </qualifiedTypeNameHistroy>

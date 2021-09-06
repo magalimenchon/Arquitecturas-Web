@@ -11,17 +11,17 @@ public class Main {
 		DAOFactory mysqlFactory = DAOFactory.getDAOFactory(DAOFactory. MYSQL_JDBC);
 		CustomerDAO custDAO = mysqlFactory.getCustomerDAO();
 		// create a new customer
-		int newCustNo = custDAO.insertCustomer(...);
+		//int newCustNo = custDAO.insertCustomer(...);
 		// Find a customer object.
-		Customer cust = custDAO.findCustomer(...);
+		//Customer cust = custDAO.findCustomer(...);
 		// modify the values in the Transfer Object and update it using the DAO
-		cust.setAddress(...);
-		cust.setEmail(...);
-		custDAO.updateCustomer(cust);
+		//cust.setAddress(...);
+		//cust.setEmail(...);
+		//custDAO.updateCustomer(cust);
 		// select all customers in the same city
-		CustomerCriteria criteria=new CustomerCriteria();
-		criteria.setCity("New York");
-		Collection customersList = custDAO.selectCustomers(criteria);
+		//CustomerCriteria criteria=new CustomerCriteria();
+		//criteria.setCity("New York");
+		//Collection customersList = custDAO.selectCustomers(criteria);
 
 	}
 
