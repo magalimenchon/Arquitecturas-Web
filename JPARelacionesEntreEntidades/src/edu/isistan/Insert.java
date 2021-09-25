@@ -15,7 +15,7 @@ public class Insert {
 		em.getTransaction().begin();
 		Direccion d = new Direccion("Tandil", "Sarmiento 772");
 		em.persist(d);
-		Persona j = new Persona(1, "Juan", 25, d);
+		Persona j = new Persona(11, "Juan", 25, d);
 		Persona a = new Persona(2, "Ana", 22, d);
 		em.persist(j);
 		em.persist(a);

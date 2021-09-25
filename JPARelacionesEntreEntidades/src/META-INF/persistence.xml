@@ -8,6 +8,8 @@
 		
 		<class>edu.isistan.dao.Persona</class>
 		<class>edu.isistan.dao.Direccion</class>
+		<class>edu.isistan.dao.Socio</class>
+		<class>edu.isistan.dao.Turno</class>
 		
 		<properties>
 			<!-- Propiedades de configuracion de JDBC para Apache Derby -->
