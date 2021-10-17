@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>TudaiLiveServlet</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<!-- Información del Servlet, se le asigna el nombre MiServicioREST
+  	e indica que el servlet viene con Jersey -->
+	  <servlet-name>MiServicioREST</servlet-name>
+	  <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+	  <init-param>
+	<!-- Busque las impls de los servicios REST en paquete edu.isistan.rest -->
+	  	<param-name>org.glassfish.jersey.provider.packages</param-name>
+	  	<param-value>edu.isistan.test</param-value>
+	  </init-param>
+  </servlet>
+  
+  <servlet-mapping>
+	  <servlet-name>MiServicioREST</servlet-name>
+	<!-- Los ponga a todos en esa URL -->
+	<!--  <url-pattern>/rest/*</url-pattern>--> 
+	<!-- Información de versión de mi API -->
+	  <url-pattern>/api/v1/*</url-pattern>
+  </servlet-mapping>
+</web-app>
